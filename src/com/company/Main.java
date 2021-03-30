@@ -41,18 +41,35 @@ public class Main {
         }
         return sum;
     }
+    public static void Task1(RandomGenerator generator) {
+        int number = generator.randomInt();
+        System.out.println("Task1"+ "\n"+ "Random number: "+number+"; Highest numeral: "+maxNumeral(number));
+    }
+    public static void Task2(RandomGenerator generator) {
+        int number = generator.randomInt();
+        int number1= generator.randomInt();
+        int number2 = generator.randomInt();
+        System.out.println("Task2"+"\n"+number+"\n"+number1+"\n"+number2+"\n"+"Sum of firstDigits of numbers: " + sumFirstDigits(firstDigit(number),firstDigit(number1),firstDigit(number2)));
+    }
+    public static void Task3(RandomGenerator generator) {
+        int number = generator.randomInt();
+        int number1= generator.randomInt();
+        int number2 = generator.randomInt();
+        int connected=connectNumbers(number,number1);
+        System.out.println("Task3"+"\n"+number+"\n"+number1+"\n"+number2+"\n"+"ConnectedNumber: "+connected+" Difference: " +connected + " - "+ number2+ "="+ (connected-number2));
+    }
+    public static void Task4(RandomGenerator generator) {
+        int number = generator.randomInt();
+        System.out.println("Task4"+ "\n"+ "Random number: "+number+"; Sum of digits: "+sumOfTheDigits(number));
+    }
 
 
 
     public static void main(String[] args) {
         var generator=new RandomGenerator();
-        int number=generator.randomInt();
-        int number1=generator.randomInt();
-        int number2=generator.randomInt();
-        System.out.println("The First number: "+number+"; Highest numeral: "+maxNumeral(number)+";  Sum of Digits: " + sumOfTheDigits(number)+"\n"+
-                "The Second number: " +number1 +"\n"+
-                "The Third number: "+number2+ "\n"+
-                "Sum of firstDigits of numbers: " + sumFirstDigits(firstDigit(number),firstDigit(number1),firstDigit(number2))+"\n"+
-                "Difference of connectNumber and simple number " + connectNumbers(number,number1)+ " - "+ number2+ "= "+(connectNumbers(number,number1)-number2));
+        Task1(generator);
+        Task2(generator);
+        Task3(generator);
+        Task4(generator);
     }
 }
