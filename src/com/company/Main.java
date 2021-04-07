@@ -60,7 +60,7 @@ public class Main {
         int number1= RandomGenerator.getRandomInt();
         int number2 = RandomGenerator.getRandomInt();
         int connected=connectNumbers(number,number1);
-        System.out.println("Task3"+"\n"+number+"\n"+number1+"\n"+number2+"\n"+"ConnectedNumber: "+connected+" Difference: " +connected + " - "+ number2+ "="+ (connected-number2));
+        System.out.println("Task3 "+"\n"+number+"\n"+number1+"\n"+number2+"\n"+"ConnectedNumber: "+connected+" Difference: " +connected + " - "+ number2+ "="+ (connected-number2));
     }
     public static void Task4() {
         int number = RandomGenerator.getRandomInt();
